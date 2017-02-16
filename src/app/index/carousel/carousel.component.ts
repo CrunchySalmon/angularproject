@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 
-
 @Component({
     selector: 'carousel',
     moduleId: module.id,

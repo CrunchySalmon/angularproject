@@ -1,0 +1,39 @@
+
+<div class="container" id="separate">
+  <div class="line"></div>
+    <div>POPULAR PRODUCTS</div>
+  <div class="line"></div>
+</div>
+
+<div class="container" id="products">
+  
+    <div id="product" class="col-md-3" *ngFor="let product of products">
+      <div id="rating">
+        <i class="glyphicon glyphicon-star" id="star"></i>
+        <i class="glyphicon glyphicon-star" id="star"></i>
+        <i class="glyphicon glyphicon-star" id="star"></i>
+        <i class="glyphicon glyphicon-star" id="star"></i>
+        <i class="glyphicon glyphicon-star" id="star"></i>
+      </div>
+      <div id="shoe">
+        <img src="./app/assets/images/shoe.png" alt="shoe">
+      </div>
+      <div id="descrip">
+
+        <h4>{{product.title}}</h4>
+        <h5>{{product.subtitle}}</h5>
+         <div>{{product.description }}</div>
+
+          <div id="price">
+            <div>{{product.price | currency:'USD':true:'2.2-2'}}</div>
+            <div>
+              <i class="glyphicon glyphicon-heart-empty"></i>
+              <i class="glyphicon glyphicon-plus-sign"></i>
+          </div>
+          </div>
+      </div>
+     
+        <a [routerLink]="['/detail', products.id]" class="buy-btn"><button>BUY NOW</button></a>
+    </div>
+    
+</div>
